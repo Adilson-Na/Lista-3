@@ -1,0 +1,13 @@
+ static void Exercicio5()
+    {
+        int valor;
+        do
+        {
+            Console.Write("Digite um valor positivo: ");
+        } while (!int.TryParse(Console.ReadLine(), out valor) || valor <= 0);
+
+        for (int i = 1; i <= 10; i++)
+            Console.WriteLine($"{valor} x {i} = {valor * i}");
+        Console.ReadKey();
+    }
+
