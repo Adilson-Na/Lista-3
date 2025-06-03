@@ -1,0 +1,25 @@
+static void Exercicio13()
+    {
+        string repetir;
+        do
+        {
+            int n;
+            do
+            {
+                Console.Write("Digite um número não negativo: ");
+            } while (!int.TryParse(Console.ReadLine(), out n) || n < 0);
+
+            long fatorial = 1;
+            for (int i = 2; i <= n; i++)
+                fatorial *= i;
+
+            Console.WriteLine($"{n}! = {fatorial}");
+
+            do
+            {
+                Console.Write("Deseja calcular outro fatorial? (S/N): ");
+                repetir = Console.ReadLine().ToUpper();
+            } while (repetir != "S" && repetir != "N");
+        } while (repetir == "S");
+    }
+}
