@@ -1,0 +1,10 @@
+ static void Exercicio2()
+    {
+        int a, b;
+        Console.Write("Digite o primeiro valor: ");
+        int.TryParse(Console.ReadLine(), out a);
+        do
+        {
+            Console.Write("Digite o segundo valor (maior que o primeiro): ");
+        } while (!int.TryParse(Console.ReadLine(), out b) || b <= a);
+    }
