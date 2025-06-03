@@ -1,0 +1,19 @@
+static void Exercicio6()
+    {
+        int x, a, b;
+        do
+        {
+            Console.Write("Digite o valor X (positivo): ");
+        } while (!int.TryParse(Console.ReadLine(), out x) || x <= 0);
+
+        Console.Write("Digite o valor A: ");
+        int.TryParse(Console.ReadLine(), out a);
+        do
+        {
+            Console.Write("Digite o valor B (maior que A): ");
+        } while (!int.TryParse(Console.ReadLine(), out b) || b <= a);
+
+        for (int i = b; i >= a; i--)
+            Console.WriteLine($"{x} x {i} = {x * i}");
+        Console.ReadKey();
+    }
