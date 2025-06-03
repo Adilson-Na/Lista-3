@@ -1,0 +1,20 @@
+static void Exercicio10()
+    {
+        List<int> valores = new();
+        while (valores.Count < 10)
+        {
+            Console.Write($"Digite o {valores.Count + 1}º valor positivo: ");
+            if (int.TryParse(Console.ReadLine(), out int v) && v > 0)
+                valores.Add(v);
+            else
+                Console.WriteLine("Valor inválido!");
+        }
+        int maior = int.MinValue, soma = 0;
+        foreach (var v in valores)
+        {
+            if (v > maior) maior = v;
+            soma += v;
+        }
+        Console.WriteLine($"Maior: {maior}, Soma: {soma}, Média: {(double)soma / valores.Count}");
+        Console.ReadKey();
+    }
