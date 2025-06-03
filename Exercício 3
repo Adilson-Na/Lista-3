@@ -1,0 +1,10 @@
+ static void Exercicio3()
+    {
+        string sexo;
+        do
+        {
+            Console.Write("Digite o sexo (M/F): ");
+            sexo = Console.ReadLine().ToUpper();
+        } while (sexo != "M" && sexo != "F");
+    }
+
