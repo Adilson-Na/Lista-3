@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("Lista de Exercícios - Escolha uma opção:");
+            for (int i = 1; i <= 13; i++)
+                Console.WriteLine($"{i} - Exercício {i}");
+            Console.WriteLine("0 - Sair");
+
+            Console.Write("Opção: ");
+            if (!int.TryParse(Console.ReadLine(), out int opcao) || opcao < 0 || opcao > 13)
+            {
+                Console.WriteLine("Opção inválida. Pressione qualquer tecla para continuar.");
+                Console.ReadKey();
+                continue;
+            }
+
+            if (opcao == 0) break;
+
+            switch (opcao)
+            {
+                case 1: Exercicio1(); break;
+                case 2: Exercicio2(); break;
+                case 3: Exercicio3(); break;
+                case 4: Exercicio4(); break;
+                case 5: Exercicio5(); break;
+                case 6: Exercicio6(); break;
+                case 7: Exercicio7(); break;
+                case 8: Exercicio8(); break;
+                case 9: Exercicio9(); break;
+                case 10: Exercicio10(); break;
+                case 11: Exercicio11(); break;
+                case 12: Exercicio12(); break;
+                case 13: Exercicio13(); break;
+            }
+        }
+    }
+
