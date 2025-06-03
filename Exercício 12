@@ -1,0 +1,13 @@
+static void Exercicio12()
+    {
+        string repetir;
+        do
+        {
+            Exercicio11();
+            do
+            {
+                Console.Write("Deseja executar novamente? (S/N): ");
+                repetir = Console.ReadLine().ToUpper();
+            } while (repetir != "S" && repetir != "N");
+        } while (repetir == "S");
+    }
